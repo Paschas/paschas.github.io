@@ -46,10 +46,8 @@ function draw() {
     textSize(20)
     text('Color 1: ' + (255 - slider1.value()).toString(), 5, 100)
     text('Color 2: ' + (255 - slider2.value()).toString(), 1000, 100)
-    let distance_between_rects = Math.sqrt(3 * ((255 - slider2.value()) - (255 - slider1.value())) * ((255 - slider2.value()) - (255 - slider1.value())))
-    let distance_between_illusion1 = Math.sqrt(3 * ((255 - slider1.value()) - 111) * ((255 - slider1.value()) - 111))
-    let distance_between_illusion2 = Math.sqrt(3 * ((255 - slider2.value()) - 111) * ((255 - slider2.value()) - 111))
-    text('Color distance 1: ' + distance_between_rects.toString().substring(0, 5), 1000, 650)
-    text('Color distance 2: ' + distance_between_illusion1.toString().substring(0, 5), 1000, 670)
-    text('Color distance 3: ' + distance_between_illusion2.toString().substring(0, 5), 1000, 690)
+    let distance_between_illusion1 = 255 - slider1.value() - 111
+    let distance_between_illusion2 = 255 - slider2.value() - 111
+    text('Color difference 1: ' + distance_between_illusion1.toString().substring(0, 5), 1000, 650)
+    text('Color difference 2: ' + distance_between_illusion2.toString().substring(0, 5), 1000, 670)
 }
